@@ -6,6 +6,7 @@ By this method all the bank data was transferred to the Database.
 
 After this it was just a matter of creating api inside the base app and serializing the data to display.
 All the api urls are 
+
         'VIEW ALL COMMANDS: GET /api',
         
         'VIEW ALL BANK LIST AND IFSC: GET/api/banks',
