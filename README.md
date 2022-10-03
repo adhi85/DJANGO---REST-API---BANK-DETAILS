@@ -15,6 +15,6 @@ All the api urls are
 
 Here the ifsc is used as the primary key to get a specific bank details.
 
-THE TIME TAKEN TO COMPLETE THIS ASSIGNMENT WAS 1 1/2 DAY.
+THE TIME TAKEN TO COMPLETE THIS ASSIGNMENT WAS 1 DAY.
 
 #The test_website.html is a test case html website which displays data fetched from the api.
