@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TEST BANKS</title>
+
+  </head>
+  <body>
+
+    <h1> BANK DETAILS</h1><HR>
+
+    <div id ="rooms-container">
+
+
+    </div>
+  </body>
+
+  <script>
+    let roomsContainer = document.getElementById('rooms-container')
+
+    let getBank = async () => {
+    let response = await fetch('http://127.0.0.1:8000/api/banks/ABHY0065002')
+    let bank = await response.json()
+
+      let row = `<div>
+                    <h3>IFSC : ${bank.ifsc} </h3>
+                    <h3>BANK ID : ${bank.bank_id} </h3>
+                    <h3>BRANCH : ${bank.branch} </h3>
+                    <h3>ADDRESS : ${bank.address} </h3>
+                    <h3>CITY : ${bank.city} </h3>
+                    <h3>DISTRICT : ${bank.district} </h3>
+                    <h3>STATE : ${bank.state} </h3>
+                    <h3>BANK NAME: ${bank.bank_name} </h3>
+
+                </div>`
+      roomsContainer.innerHTML += row
+     
+    }
+
+    getBank()
+  </script>
+
+</html>
